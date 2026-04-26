@@ -21,7 +21,7 @@ const news = [
 
 const BrackingNews = () => {
     return (
-        <div className='flex justify-between gap-4 items-center bg-gray-200 py-4 px-2 container mx-auto'>
+        <div className='flex justify-between gap-4 items-center bg-gray-200 py-4 px-2 w-11/12 mx-auto'>
             <button className='btn bg-pink-500 text-white'>Latest News</button>
             <Marquee pauseOnHover={true} speed={50}>
                 {news.map(n=>
