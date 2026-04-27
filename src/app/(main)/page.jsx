@@ -1,3 +1,5 @@
+import LeftSidebar from "@/components/homepage/news/LeftSidebar";
+import RightSidebar from "@/components/homepage/news/RightSidebar";
 import Image from "next/image";
 
 async function getCategories() {
@@ -14,25 +16,13 @@ export default async function Home() {
   return (
     <div className="w-11/12 mx-auto grid grid-cols-12 gap-4 my-[60px]">
       <div className="font-bold text-lg col-span-3">
-        All Caterogy
-        <ul className="flex flex-col gap-3 mt-6">
-          {categories.news_category.map((category) => {
-            return (
-              <li
-                key={category.category_id}
-                className="bg-slate-100 p-2 rounsed-md font-bold text-center text-md"
-              >
-                {category.category_name}
-              </li>
-            );
-          })}
-        </ul>
+        <LeftSidebar categories={categories} activeId={"null"}></LeftSidebar>
       </div>
       <div className="font-bold text-3xl bg-purple-100 col-span-6">
-        All News
+        Dragon News Home
       </div>
-      <div className="font-bold text-3xl bg-yellow-100 col-span-3">
-        Social icon
+      <div className=" col-span-3">
+        <RightSidebar></RightSidebar>
       </div>
     </div>
   );
