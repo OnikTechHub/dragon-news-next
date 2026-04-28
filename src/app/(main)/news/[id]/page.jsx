@@ -6,11 +6,26 @@ import { BsArrowRight } from 'react-icons/bs';
 import { CiBookmark } from 'react-icons/ci';
 import { FaEye, FaRegShareSquare, FaStar } from 'react-icons/fa';
 
-const NewsDetailsPage = async ({ params }) => {
+
+export const generateMetadata = async ({params}) => {
+
     const {id} = await params;
     console.log(id, "params")
+
     const news = await getNewsDetailsById(id);
     console.log(news, "news")
+
+    return {
+        title: news.title,
+        description: news.details,
+    }
+};
+
+const NewsDetailsPage = async ({ params }) => {
+    const {id} = await params;
+    // console.log(id, "params")
+    const news = await getNewsDetailsById(id);
+    // console.log(news, "news")
     return (
         <div className='max-w-4xl  mx-auto my-8 '>
            <div className="card-body">
