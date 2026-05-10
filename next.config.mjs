@@ -9,7 +9,17 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'i.ibb.co', // Tomar image error-er domain
+        hostname: 'i.ibb.co',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'png.pngtree.com', // আপনার আগের এরর ডোমেইনটি এখানে যোগ করলাম
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com', // গুগল লগইন ইমেজের জন্য এটিও দরকার হয়
         pathname: '**',
       },
     ],

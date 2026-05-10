@@ -1,11 +1,9 @@
-import { redirect } from "next/navigation"; 
+import { redirect } from "next/navigation";
 
-const default_catagory_id = "01";
+const default_category_id = "01";
 
 const Home = async () => {
-  
-  redirect(`/category/${default_catagory_id}`);
-
+  redirect(`/category/${default_category_id}`);
 };
 
 export default Home;

@@ -1,17 +1,17 @@
-import BrackingNews from '@/components/shared/BeackingNews';
-import Header from '@/components/shared/Header';
-import Navbar from '@/components/shared/Navbar';
-import React from 'react';
+import BreakingNews from "@/components/shared/BreakingNews";
+import Header from "@/components/shared/Header";
+import Navbar from "@/components/shared/Navbar";
+import React from "react";
 
-const layout = ({children}) => {
-    return (
-        <div>
-            <Header></Header>
-            <BrackingNews></BrackingNews>
-            <Navbar></Navbar>
-            {children}
-        </div>
-    );
+const MainLayout = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <BreakingNews />
+      <Navbar />
+      {children}
+    </>
+  );
 };
 
-export default layout;
+export default MainLayout;

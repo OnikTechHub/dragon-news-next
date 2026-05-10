@@ -1,15 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export const metadata = {
-  title: "Dragon News - Career",
-  
+  title: "Dragon News - career",
 };
+
 const CareerPage = () => {
-    return (
-        <div>
-            Career Page
-        </div>
-    );
+  return <div>Career page</div>;
 };
 
 export default CareerPage;
